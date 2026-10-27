@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.page-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.06);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.filter-bar .el-select,
+.filter-bar .el-date-editor,
+.filter-bar .el-input {
+  width: 190px;
+}
+
+.num-right {
+  text-align: right;
+}
+
+.amount-up {
+  color: #67c23a;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.amount-down {
+  color: #f56c6c;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.total-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  padding: 8px 4px;
+  font-weight: 600;
+  color: #303133;
+}
+
+.muted {
+  color: #909399;
+  font-size: 12px;
+}
+
+.panel-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #303133;
+  margin: 0 0 12px;
+}

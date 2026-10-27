@@ -1,0 +1,10 @@
+# 构建产物
+node_modules/
+dist/
+bin/
+obj/
+uploads/
+*.zip
+.vs/
+*.user
+appsettings.Production.json.bak

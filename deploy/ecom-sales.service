@@ -1,0 +1,24 @@
+# 电商销售管理系统 · systemd 服务单元
+# 放置到 /etc/systemd/system/ecom-sales.service
+# 发布目录：/opt/ecom-sales/api（dotnet publish 产物）
+
+[Unit]
+Description=Ecom Sales Management API (.NET 10)
+After=network.target mysqld.service mysql.service
+Wants=mysqld.service mysql.service
+
+[Service]
+Type=notify
+WorkingDirectory=/opt/ecom-sales/api
+ExecStart=/usr/bin/dotnet /opt/ecom-sales/api/EcomSales.Api.dll --urls http://127.0.0.1:5000
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=ecom-sales-api
+User=www-data
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
